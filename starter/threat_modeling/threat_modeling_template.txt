@@ -1,14 +1,18 @@
 Docker Threat Modeling
 Given Docker's system components and the STRIDE framework, identify five potential threats that may arise.
 * Information Disclosure / Tampering: Getting access to host files for untrusted users member of the docker group (see risk chap. 1.2.2)
-* Information Disclosure: Restrict network traffic between containers on the same host (see risk chap. 2.1)
+* Information Disclosure: Unrestricted network traffic between containers on the same host (see risk chap. 2.1)
 * Tampering: Allows container execution interruption if parameter live-restore is not set (see risk chap. 2.13)
 * Tampering: Enabled userland proxy increases the attack surface (see risk chap. 2.14)
 * Elevation of Privilege: Additional privileges can be acquired, if no_new_priv is not set (see risk chap. 2.17)
 
 Kubernetes Threat Modeling
 Given Kubernetes' system components and the STRIDE framework, identify five potential threats that may arise.
-* 
+* Tampering: Unrestricted access rights to data directory of etcd service  (see risk chap. 1.1.11)
+* Spoofing: Enabled and unsafe basic auth for API server (see risk chap. 1.2.2)
+* Tampering: Authorization mode is set to "AlwaysAllow" (see risk chap. 1.2.7)
+* Repudiation: Audit log path is not set (see risk chap. 1.2.22)
+* Denial of service: Request timeout is set as appropriate (see risk chap. 1.2.26)
 
 Docker-bench Run Results and Analysis
 From the failed findings, select and document 3 findings from the Docker-bench results that you want to harden based on the 5 attack surface areas you identified in Step 1. At least 1 of the 3 hardened findings should be different from the ones mentioned in the exercise (i.e. 5.10, 5.14, and 5.22).

@@ -33,6 +33,8 @@ nodes:
 #  taints: []
 services:
   etcd:
+    gid: 52034
+    uid: 52034
     image: ""
     extra_args: {}
     extra_binds: []

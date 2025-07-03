@@ -262,8 +262,8 @@ restore:
   snapshot_name: ""
 rotate_encryption_key: false
 dns: null
-upgrade_strategy:
-  max_unavailable_worker: ""
-  max_unavailable_controlplane: ""
-  drain: null
-  node_drain_input: null
+#upgrade_strategy:
+#  max_unavailable_worker: ""
+#  max_unavailable_controlplane: ""
+#  drain: null
+#  node_drain_input: null

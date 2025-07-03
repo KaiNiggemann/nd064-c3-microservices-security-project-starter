@@ -61,7 +61,7 @@ services:
     win_extra_env: []
     service_cluster_ip_range: 10.43.0.0/16
     service_node_port_range: ""
-    pod_security_policy: true
+    pod_security_policy: false
     always_pull_images: false
     secrets_encryption_config:
       enabled: true
@@ -107,7 +107,7 @@ services:
     infra_container_image: ""
     cluster_dns_server: 10.43.0.10
     fail_swap_on: false
-    generate_serving_certificate: true
+    generate_serving_certificate: false
   kubeproxy:
     image: ""
     extra_args: {}

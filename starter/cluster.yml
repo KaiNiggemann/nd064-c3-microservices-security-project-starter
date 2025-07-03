@@ -69,8 +69,8 @@ services:
     event_rate_limit: null
   kube-controller:
     image: ""
-    extra_args:
-      feature-gates: RotateKubeletServerCertificate=true
+    extra_args: {}
+ #     feature-gates: RotateKubeletServerCertificate=true
     extra_binds: []
     extra_env: []
     win_extra_args: {}

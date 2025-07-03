@@ -1,5 +1,7 @@
 # author: nick.reva@snap.com
 # created April 11, 2021
+enable_network_policy: true
+default_pod_security_policy_template_id: "restricted"
 nodes:
 - address: 192.168.50.101
   port: "22"

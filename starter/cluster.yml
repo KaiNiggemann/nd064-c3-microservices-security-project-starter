@@ -33,8 +33,6 @@ nodes:
 #  taints: []
 services:
   etcd:
-    gid: 0 #52034
-    uid: 0 #52034
     image: ""
     extra_args: {}
     extra_binds: []
@@ -47,6 +45,8 @@ services:
     cert: ""
     key: ""
     path: ""
+    uid: 0
+    gid: 0
     snapshot: null
     retention: ""
     creation: ""

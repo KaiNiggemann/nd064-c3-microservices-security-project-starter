@@ -1,0 +1,28 @@
+## Kubernetes Hardening Test Plan
+
+When hardening a Kubernetes cluster, it's crucial to ensure that security changes do not harm system stability.
+
+### How will you test the changes?
+
+- **Staging Environment:**
+Apply all changes first to a staging cluster that closely matches production. This helps catch problems before they reach users.
+- **Automated Tests:**
+Run automated integration and regression tests after every change to verify that applications and cluster services still work as expected.
+- **Manual Checks:**
+Manually verify that key workloads can start, network communication works, and users can access necessary services.
+- **Performance Testing**
+Get traffic from production system and apply it to test cluster to test that the system can handle the load.
+
+
+### How will you ensure the changes don’t negatively affect your cluster?
+
+- **Monitoring and Alerts:**
+Use monitoring tools (like Prometheus) to watch cluster health and performance before and after changes.
+- **Gradual Rollouts:**
+Deploy changes in small steps (canary or blue/green deployments) and monitor the impact at each stage.
+- **Rollback Plan:**
+Always have a tested rollback procedure ready so you can quickly undo changes if something goes wrong.
+- **Communication:**
+Keep all teams informed about changes and document results for future reference.
+
+

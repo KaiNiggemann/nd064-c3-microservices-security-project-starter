@@ -1,0 +1,26 @@
+1. Incident commander name:
+Kai Niggemann
+
+2. Executive Summary of what happened:
+Three pods running three different crypto miners were launched.
+This was detected by Falco system monitoring.
+
+3. Summary of what was affected:
+Kubernetes cluster was affected.
+
+4. Summmry of the impact:
+Increased CPU and memory utilization leading to increased costs
+lowering the performance and stability of the whole cluster at 
+the same time.
+The crypto miners also increase the attack surface by having
+their own security flaws.
+
+5. Summary of the remediation steps:
+The administrator noticed the event through Grafana monitoring and evicted the pods.
+Access to the Kubernetes API server from administrative terminals and the Grafana dashboards was restricted. 
+Admission controllers have been configured to disallow unknown images to be used to create containers.
+
+6. Summary of lessons learned:
+Access restrictions to the kubernetes cluster have been too low and must be configured more strict in future
+for every (new) cluster.
+Hardening of a cluster should be validated automatically, e.g. by using Kube-bench.
